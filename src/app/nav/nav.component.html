@@ -20,9 +20,18 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="nav navbar-nav">
         <li>
-          <a [routerLink]="['/events']">All Events</a>
+          <a
+            routerLinkActive="active"
+            [routerLink]="['/events']"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >All Events</a
+          >
         </li>
-        <li><a [routerLink]="['/events/new']">Create Event</a></li>
+        <li>
+          <a routerLinkActive="active" [routerLink]="['/events/new']"
+            >Create Event</a
+          >
+        </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             Events
@@ -30,7 +39,11 @@
           </a>
           <ul class="dropdown-menu">
             <li *ngFor="let event of events">
-              <a [routerLink]="['/events', event.id]">{{ event.name }}</a>
+              <a
+                routerLinkActive="active"
+                [routerLink]="['/events', event.id]"
+                >{{ event.name }}</a
+              >
             </li>
           </ul>
         </li>
