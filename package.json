@@ -20,6 +20,7 @@
     "@angular/router": "~13.0.0",
     "ngf-bootstrap": "^0.0.5",
     "rxjs": "~7.4.0",
+    "toastr": "^2.1.4",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
@@ -36,6 +37,7 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "prettier": "^2.4.1",
+    "prettier-plugin-organize-imports": "^2.3.4",
     "typescript": "~4.4.3"
   }
 }
