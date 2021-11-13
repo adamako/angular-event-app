@@ -9,6 +9,7 @@ export const appRoutes: Routes = [
   {
     path: 'events/new',
     component: NewEventComponent,
+    canDeactivate: ['canDeactivateCreateEvent'],
   },
   {
     path: 'events',
