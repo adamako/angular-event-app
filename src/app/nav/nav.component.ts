@@ -8,9 +8,9 @@ import { EventService } from '../services/event/event.service';
 })
 export class NavComponent implements OnInit {
   events: any;
-  constructor(private eventsService: EventService) {}
+  constructor(private eventService: EventService) {}
 
   ngOnInit(): void {
-    this.events = this.eventsService.getEvents();
+    this.eventService.getEvents().subscribe((events) => (this.events = events));
   }
 }

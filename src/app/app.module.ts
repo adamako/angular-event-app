@@ -9,6 +9,7 @@ import { EventThumbnailComponent } from './events/event-thumbnail/event-thumbnai
 import { NewEventComponent } from './events/new-event/new-event.component';
 import { NavComponent } from './nav/nav.component';
 import { appRoutes } from './routes';
+import { EventResolver } from './services/event/event.resolver';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { appRoutes } from './routes';
 
   imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
   providers: [
+    EventResolver,
     {
       provide: 'canDeactivateCreateEvent',
       useValue: checkDirtyState,
