@@ -5,8 +5,10 @@ import { AppComponent } from './app.component';
 import { EventDetailsComponent } from './events/event-details/event-details.component';
 import { EventsListComponent } from './events/event-list/events-list.component';
 import { EventThumbnailComponent } from './events/event-thumbnail/event-thumbnail.component';
+import { NewEventComponent } from './events/new-event/new-event.component';
 import { NavComponent } from './nav/nav.component';
 import { appRoutes } from './routes';
+import { NotFoundComponent } from './errors/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { appRoutes } from './routes';
     EventThumbnailComponent,
     NavComponent,
     EventDetailsComponent,
+    NewEventComponent,
+    NotFoundComponent,
   ],
 
   imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
