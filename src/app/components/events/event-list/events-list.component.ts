@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { EventService } from '../../../services/event/event.service';
-import { ToastrService } from '../../../services/toastr/toastr.service';
+import { IEvent } from '../../../models/event';
+import { EventService, ToastrService } from '../../../services';
 
 @Component({
   selector: 'event-list',
@@ -9,7 +9,7 @@ import { ToastrService } from '../../../services/toastr/toastr.service';
   styleUrls: ['./events-list.component.css'],
 })
 export class EventsListComponent implements OnInit {
-  events: any;
+  events: IEvent[] = [];
 
   constructor(
     private eventService: EventService,
