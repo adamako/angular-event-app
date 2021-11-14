@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { EventService } from '../../services/event/event.service';
+import { IEvent } from '../../models/event.model';
+import { EventService } from '../../services';
+import { AuthService } from '../../services/auth/auth.service';
 
 @Component({
   selector: 'nav-bar',
@@ -7,8 +9,11 @@ import { EventService } from '../../services/event/event.service';
   styleUrls: ['./nav.component.css'],
 })
 export class NavComponent implements OnInit {
-  events: any;
-  constructor(private eventService: EventService) {}
+  events: IEvent[] = [];
+  constructor(
+    private eventService: EventService,
+    public authService: AuthService
+  ) {}
 
   ngOnInit(): void {
     this.eventService.getEvents().subscribe((events) => (this.events = events));
