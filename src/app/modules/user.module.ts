@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ProfileComponent } from './profile/profile.component';
-import { userRoutes } from './userRoutes';
+import { ProfileComponent } from '../components';
+import { userRoutes } from '../routes/userRoutes';
 
 @NgModule({
   declarations: [ProfileComponent],

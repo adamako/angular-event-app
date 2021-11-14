@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { EventService } from '../../services/event/event.service';
-import { ToastrService } from '../../services/toastr/toastr.service';
+import { EventService } from '../../../services/event/event.service';
+import { ToastrService } from '../../../services/toastr/toastr.service';
 
 @Component({
   selector: 'event-list',
