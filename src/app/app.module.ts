@@ -8,10 +8,10 @@ import {
   NavComponent,
   NewEventComponent,
   NotFoundComponent,
-} from '../components';
-import { AppComponent } from '../components/app.component';
-import { appRoutes } from '../routes/mainRoutes';
-import { EventResolver } from '../services';
+} from './components';
+import { AppComponent } from './components/app.component';
+import { appRoutes } from './routes/mainRoutes';
+import { EventResolver } from './services';
 
 @NgModule({
   declarations: [
