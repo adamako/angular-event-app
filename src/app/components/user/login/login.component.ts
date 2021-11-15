@@ -10,6 +10,7 @@ import { AuthService } from '../../../services/auth/auth.service';
 export class LoginComponent implements OnInit {
   password: string = '';
   userName: string = '';
+  mouseoverLogin: boolean | undefined;
 
   constructor(private authService: AuthService, private router: Router) {}
 
