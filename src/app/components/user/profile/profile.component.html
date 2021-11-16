@@ -8,7 +8,7 @@
       autocomplete="off"
       novalidate
     >
-      <div class="form-group">
+      <div class="form-group" [ngClass]="{ error: !validateFirstName() }">
         <label for="firstName">First Name:</label>
         <input
           formControlName="firstName"
@@ -17,8 +17,14 @@
           class="form-control"
           placeholder="First Name..."
         />
+        <em *ngIf="!validateFirstName()">required</em>
       </div>
-      <div class="form-group">
+      <div
+        class="form-group"
+        [ngClass]="{
+          error: !validateLastName()
+        }"
+      >
         <label for="lastName">Last Name:</label>
         <input
           formControlName="lastName"
@@ -27,6 +33,7 @@
           class="form-control"
           placeholder="Last Name..."
         />
+        <em *ngIf="!validateLastName()">required</em>
       </div>
 
       <button type="submit" class="btn btn-primary">Save</button>
