@@ -2,8 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { ProfileComponent } from '../components';
-import { LoginComponent } from '../components/user/login/login.component';
+import { LoginComponent, ProfileComponent } from '../components';
 import { userRoutes } from '../routes/userRoutes';
 
 @NgModule({

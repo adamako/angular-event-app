@@ -20,6 +20,10 @@ export class EventService {
   getEvent(id: number): IEvent {
     return <IEvent>EVENTS.find((event) => event.id === id);
   }
+
+  addEvent(data: any) {
+    EVENTS.push(data);
+  }
 }
 
 const EVENTS: IEvent[] = [

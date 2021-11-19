@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import {
+  CreateSessionComponent,
   EventDetailsComponent,
   EventsListComponent,
   NewEventComponent,
@@ -12,6 +13,10 @@ export const appRoutes: Routes = [
     path: 'events/new',
     component: NewEventComponent,
     canDeactivate: ['canDeactivateCreateEvent'],
+  },
+  {
+    path: 'events/session/new',
+    component: CreateSessionComponent,
   },
   {
     path: 'events',

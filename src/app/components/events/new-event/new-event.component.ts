@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { EventService } from '../../../services';
 
 @Component({
   selector: 'app-new-event',
@@ -7,12 +8,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./new-event.component.css'],
 })
 export class NewEventComponent implements OnInit {
-  isDirty = false;
-  constructor(private route: Router) {}
+  isDirty = true;
+  newEvent: any;
+  constructor(private route: Router, private eventService: EventService) {}
 
   ngOnInit(): void {}
 
   cancel() {
     this.route.navigate(['/events']);
+  }
+
+  saveEvent(values: any) {
+    this.eventService.addEvent(values);
+    this.route.navigate(['events']);
   }
 }
