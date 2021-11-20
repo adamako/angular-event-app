@@ -74,7 +74,13 @@
       <em *ngIf="abstract?.invalid && abstract?.dirty">required</em>
       <em
         *ngIf="
-          abstract?.invalid && abstract?.dirty && abstract?.errors?.maxLength
+          abstract?.invalid && abstract?.dirty && abstract?.errors?.['maxLength']
+        "
+        >required</em
+      >
+      <em
+        *ngIf="
+          abstract?.invalid && abstract?.dirty && abstract?.errors?.['required']
         "
         >required</em
       >
