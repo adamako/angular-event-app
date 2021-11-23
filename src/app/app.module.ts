@@ -15,6 +15,7 @@ import { CreateSessionComponent } from './components/events/sessions/create-sess
 import { SessionsListComponent } from './components/events/sessions/sessions-list/sessions-list.component';
 import { appRoutes } from './routes/mainRoutes';
 import { EventResolver } from './services';
+import { CollapsibleWellComponent } from './components/common/collapsible-well/collapsible-well.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { EventResolver } from './services';
     NotFoundComponent,
     CreateSessionComponent,
     SessionsListComponent,
+    CollapsibleWellComponent,
   ],
 
   imports: [
