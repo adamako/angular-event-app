@@ -16,6 +16,7 @@ import { SessionsListComponent } from './components/events/sessions/sessions-lis
 import { appRoutes } from './routes/mainRoutes';
 import { EventResolver } from './services';
 import { CollapsibleWellComponent } from './components/common/collapsible-well/collapsible-well.component';
+import { DurationPipe } from './utils/duration.pipe';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { CollapsibleWellComponent } from './components/common/collapsible-well/c
     CreateSessionComponent,
     SessionsListComponent,
     CollapsibleWellComponent,
+    DurationPipe,
   ],
 
   imports: [
