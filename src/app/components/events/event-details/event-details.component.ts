@@ -16,6 +16,7 @@ export class EventDetailsComponent implements OnInit {
 
   event: IEvent | undefined;
   addMode: boolean | undefined = false;
+  filterBy: string='all';
 
   ngOnInit(): void {
     this.event = this.eventService.getEvent(+this.route.snapshot.params['id']);
