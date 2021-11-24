@@ -3,19 +3,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import {
+  CreateSessionComponent,
   EventDetailsComponent,
   EventsListComponent,
   EventThumbnailComponent,
   NavComponent,
   NewEventComponent,
   NotFoundComponent,
+  SessionsListComponent,
 } from './components';
 import { AppComponent } from './components/app.component';
-import { CreateSessionComponent } from './components/events/sessions/create-session/create-session.component';
-import { SessionsListComponent } from './components/events/sessions/sessions-list/sessions-list.component';
+import { CollapsibleWellComponent } from './components/common/collapsible-well/collapsible-well.component';
 import { appRoutes } from './routes/mainRoutes';
 import { EventResolver } from './services';
-import { CollapsibleWellComponent } from './components/common/collapsible-well/collapsible-well.component';
 import { DurationPipe } from './utils/duration.pipe';
 
 @NgModule({

@@ -28,10 +28,16 @@
       <h3 style="margin: 0">Sessions</h3>
     </div>
     <div class="col-md-7">
-      <button class="btn btn-default " [class.active]="filterBy==='all'" (click)="filterBy='all'">All</button>
-      <button class="btn btn-default"  [class.active]="filterBy==='beginner'" (click)="filterBy='beginner'">Beginner</button>
-      <button class="btn btn-default"  [class.active]="filterBy==='intermediate'" (click)="filterBy='intermediate'">Intermediate</button>
-      <button class="btn btn-default"  [class.active]="filterBy==='advanced'" (click)="filterBy='advanced'">Advanced</button>
+      <div class="btn-group  btn-group-sm" style="margin-right: 20px; margin-left: 20px">
+        <button class="btn btn-default " [class.active]="sortedBy==='name'" (click)="sortedBy='name'">By Name</button>
+        <button class="btn btn-default"  [class.active]="sortedBy==='votes'" (click)="sortedBy='votes'">By Votes</button>
+      </div>
+     <div class="btn-group btn-group-sm">
+       <button class="btn btn-default " [class.active]="filterBy==='all'" (click)="filterBy='all'">All</button>
+       <button class="btn btn-default"  [class.active]="filterBy==='beginner'" (click)="filterBy='beginner'">Beginner</button>
+       <button class="btn btn-default"  [class.active]="filterBy==='intermediate'" (click)="filterBy='intermediate'">Intermediate</button>
+       <button class="btn btn-default"  [class.active]="filterBy==='advanced'" (click)="filterBy='advanced'">Advanced</button>
+     </div>
     </div>
     <div class="col-md-2">
       <a (click)="addSession()">Add session</a>
@@ -39,6 +45,7 @@
   </div>
 
   <app-sessions-list
+    [sortedBy]="sortedBy"
     [filterBy]="filterBy"
     *ngIf="!addMode"
     [sessions]="event?.sessions"
