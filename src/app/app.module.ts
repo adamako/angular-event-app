@@ -15,8 +15,10 @@ import {
 import { AppComponent } from './components/app.component';
 import { CollapsibleWellComponent } from './components/common/collapsible-well/collapsible-well.component';
 import { appRoutes } from './routes/mainRoutes';
-import { EventResolver } from './services';
+import { EventResolver, Toastr, TOASTR_TOKEN } from './services';
 import { DurationPipe } from './utils/duration.pipe';
+
+declare let toastr: Toastr;
 
 @NgModule({
   declarations: [
@@ -41,6 +43,10 @@ import { DurationPipe } from './utils/duration.pipe';
   ],
   providers: [
     EventResolver,
+    {
+      provide: TOASTR_TOKEN,
+      useValue: toastr,
+    },
     {
       provide: 'canDeactivateCreateEvent',
       useValue: checkDirtyState,
