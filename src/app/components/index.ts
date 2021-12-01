@@ -1,3 +1,5 @@
+export * from './common/collapsible-well/collapsible-well.component';
+export * from './common/simple-modal/simple-modal.component';
 export * from './errors/not-found/not-found.component';
 export * from './events/event-details/event-details.component';
 export * from './events/event-list/events-list.component';

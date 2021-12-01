@@ -3,6 +3,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import {
+  CollapsibleWellComponent,
   CreateSessionComponent,
   EventDetailsComponent,
   EventsListComponent,
@@ -11,14 +12,18 @@ import {
   NewEventComponent,
   NotFoundComponent,
   SessionsListComponent,
+  SimpleModalComponent,
 } from './components';
 import { AppComponent } from './components/app.component';
-import { CollapsibleWellComponent } from './components/common/collapsible-well/collapsible-well.component';
 import { appRoutes } from './routes/mainRoutes';
-import { EventResolver, Toastr, TOASTR_TOKEN } from './services';
+import { EventResolver, JQ_TOKEN, Toastr, TOASTR_TOKEN } from './services';
 import { DurationPipe } from './utils/duration.pipe';
+import { ModalDirective } from './directives/modal.directive';
 
-declare let toastr: Toastr;
+// @ts-ignore
+let toastr: Toastr = window['toastr'];
+// @ts-ignore
+let jQuery = window['$'];
 
 @NgModule({
   declarations: [
@@ -33,6 +38,8 @@ declare let toastr: Toastr;
     SessionsListComponent,
     CollapsibleWellComponent,
     DurationPipe,
+    SimpleModalComponent,
+    ModalDirective,
   ],
 
   imports: [
@@ -46,6 +53,10 @@ declare let toastr: Toastr;
     {
       provide: TOASTR_TOKEN,
       useValue: toastr,
+    },
+    {
+      provide: JQ_TOKEN,
+      useValue: jQuery,
     },
     {
       provide: 'canDeactivateCreateEvent',

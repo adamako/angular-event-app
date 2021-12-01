@@ -11,7 +11,7 @@ import { AuthService } from '../../services/auth/auth.service';
 export class NavComponent implements OnInit {
   events: IEvent[] = [];
   searchTerm: string | undefined;
-  foundSessions: ISession | undefined;
+  foundSessions: ISession[] | undefined;
   constructor(
     private eventService: EventService,
     public authService: AuthService
