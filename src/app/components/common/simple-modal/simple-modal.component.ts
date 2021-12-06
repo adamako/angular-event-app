@@ -7,6 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SimpleModalComponent implements OnInit {
   @Input() title: string | undefined;
+  @Input() elementId: string | undefined;
+
   constructor() {}
 
   ngOnInit(): void {}
