@@ -7,6 +7,7 @@ export * from './events/event-thumbnail/event-thumbnail.component';
 export * from './events/new-event/new-event.component';
 export * from './events/sessions/create-session/create-session.component';
 export * from './events/sessions/sessions-list/sessions-list.component';
+export * from './events/upvote/upvote.component';
 export * from './nav/nav.component';
 export * from './user/login/login.component';
 export * from './user/profile/profile.component';

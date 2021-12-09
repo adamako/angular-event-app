@@ -19,6 +19,7 @@ import { appRoutes } from './routes/mainRoutes';
 import { EventResolver, JQ_TOKEN, Toastr, TOASTR_TOKEN } from './services';
 import { DurationPipe } from './utils/duration.pipe';
 import { ModalDirective } from './directives/modal.directive';
+import { UpvoteComponent } from './components/events/upvote/upvote.component';
 
 // @ts-ignore
 let toastr: Toastr = window['toastr'];
@@ -40,6 +41,7 @@ let jQuery = window['$'];
     DurationPipe,
     SimpleModalComponent,
     ModalDirective,
+    UpvoteComponent,
   ],
 
   imports: [

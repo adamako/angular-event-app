@@ -20,7 +20,10 @@ export class EventDetailsComponent implements OnInit {
   sortedBy: string | undefined = 'name';
 
   ngOnInit(): void {
-    this.event = this.eventService.getEvent(+this.route.snapshot.params['id']);
+    this.route.params.forEach((param) => {
+      this.event = this.eventService.getEvent(+param['id']);
+      this.addMode = false;
+    });
   }
 
   addSession() {
