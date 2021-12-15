@@ -1,5 +1,5 @@
 <div class="row" *ngFor="let session of visibleSessions">
-  <div class="col-md-1">
+  <div class="col-md-1" *ngIf="authService.isAuthenticated()">
     <upvote
       (click)="toggleVote(session)"
       (vote)="toggleVote(session)"

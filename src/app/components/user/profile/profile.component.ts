@@ -1,8 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Toastr, TOASTR_TOKEN } from '../../../services';
-import { AuthService } from '../../../services/auth/auth.service';
+import { AuthService, Toastr, TOASTR_TOKEN } from '../../../services';
 
 @Component({
   selector: 'app-profile',

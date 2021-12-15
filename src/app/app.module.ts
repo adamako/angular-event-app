@@ -13,13 +13,14 @@ import {
   NotFoundComponent,
   SessionsListComponent,
   SimpleModalComponent,
+  UpvoteComponent,
 } from './components';
 import { AppComponent } from './components/app.component';
+import { ModalDirective } from './directives/modal.directive';
+import { LocationValidatorDirective } from './directives/validators/location-validator.directive';
 import { appRoutes } from './routes/mainRoutes';
 import { EventResolver, JQ_TOKEN, Toastr, TOASTR_TOKEN } from './services';
 import { DurationPipe } from './utils/duration.pipe';
-import { ModalDirective } from './directives/modal.directive';
-import { UpvoteComponent } from './components/events/upvote/upvote.component';
 
 // @ts-ignore
 let toastr: Toastr = window['toastr'];
@@ -42,6 +43,7 @@ let jQuery = window['$'];
     SimpleModalComponent,
     ModalDirective,
     UpvoteComponent,
+    LocationValidatorDirective,
   ],
 
   imports: [

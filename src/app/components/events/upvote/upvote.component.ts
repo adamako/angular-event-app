@@ -9,8 +9,12 @@ export class UpvoteComponent implements OnInit {
   constructor() {}
 
   @Input() count: number | undefined;
-  @Input() voted: boolean | undefined;
+  @Input() set voted(val: any) {
+    this.iconColor = val ? 'red' : 'white';
+  }
+
   @Output() vote = new EventEmitter();
+  iconColor: string | undefined;
 
   ngOnInit(): void {}
 

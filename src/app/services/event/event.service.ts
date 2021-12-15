@@ -22,6 +22,7 @@ export class EventService {
   }
 
   addEvent(data: any) {
+    data.id = EVENTS.length;
     EVENTS.push(data);
   }
 

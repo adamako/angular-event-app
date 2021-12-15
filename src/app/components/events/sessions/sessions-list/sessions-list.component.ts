@@ -10,7 +10,7 @@ import { AuthService, VoteService } from '../../../../services';
 export class SessionsListComponent implements OnInit, OnChanges {
   constructor(
     private voterService: VoteService,
-    private authService: AuthService
+    public authService: AuthService
   ) {}
   @Input() sessions: ISession[] | undefined;
   @Input() filterBy: string | undefined;
